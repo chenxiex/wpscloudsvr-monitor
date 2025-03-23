@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = opt/kingsoft/wps-office/office6/wpscloudsvr
+
+[Action]
+Description = Moving wpscloudsvr
+When = PostTransaction
+Exec = /usr/bin/bash -c "mv /opt/kingsoft/wps-office/office6/wpscloudsvr /opt/kingsoft/wps-office/office6/wpscloudsvr.real && cp /etc/pacman.d/hooks/wpscloudsvr /opt/kingsoft/wps-office/office6/wpscloudsvr"

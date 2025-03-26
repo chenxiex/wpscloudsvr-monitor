@@ -1,6 +1,6 @@
 #!/bin/bash
 
-setsid ./wpscloudsvr_monitor.sh &
+systemctl --user start wpscs_monitor
 
 # 启动 wpscloudsvr.real，并传递所有参数
 exec -a wpscloudsvr /opt/kingsoft/wps-office/office6/wpscloudsvr.real "$@"

@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor wpsoffice and stop wpscloudsvr when wpsoffice exits
+After=default.target
+
+[Service]
+ExecStart=/opt/kingsoft/wps-office/office6/monitor.sh
+Type=oneshot
+Restart=on-failure
+RestartSec=1min
